@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21 Dias de Oração para um Milagre Urgente</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN (para utilitários de layout) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      :root {
+        --font-inter: "Inter", sans-serif;
+        --font-playfair: "Playfair Display", serif;
+
+        --background: 220 25% 8%;
+        --foreground: 45 30% 96%;
+        --card: 220 22% 12%;
+        --card-foreground: 45 30% 96%;
+        --popover: 220 22% 12%;
+        --popover-foreground: 45 30% 96%;
+        --primary: 43 80% 55%;
+        --primary-foreground: 220 25% 8%;
+        --secondary: 220 20% 18%;
+        --secondary-foreground: 45 30% 96%;
+        --muted: 220 18% 16%;
+        --muted-foreground: 220 10% 60%;
+        --accent: 43 80% 55%;
+        --accent-foreground: 220 25% 8%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 15% 20%;
+        --input: 220 15% 20%;
+        --ring: 43 80% 55%;
+      }
+
+      body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+        font-family: var(--font-inter);
+      }
+
+      .font-inter {
+        font-family: var(--font-inter);
+      }
+
+      .font-playfair {
+        font-family: var(--font-playfair);
+      }
+
+      .bg-background {
+        background-color: hsl(var(--background));
+      }
+
+      .text-foreground {
+        color: hsl(var(--foreground));
+      }
+
+      .bg-card {
+        background-color: hsl(var(--card));
+      }
+
+      .border-border {
+        border-color: hsl(var(--border));
+      }
+
+      .text-muted-foreground {
+        color: hsl(var(--muted-foreground));
+      }
+
+      .bg-secondary {
+        background-color: hsl(var(--secondary));
+      }
+
+      .text-primary {
+        color: hsl(var(--primary));
+      }
+
+      .bg-primary\/10 {
+        background-color: hsla(43, 80%, 55%, 0.1);
+      }
+
+      .bg-primary\/20 {
+        background-color: hsla(43, 80%, 55%, 0.2);
+      }
+
+      .border-primary\/20 {
+        border-color: hsla(43, 80%, 55%, 0.2);
+      }
+
+      .border-primary\/30 {
+        border-color: hsla(43, 80%, 55%, 0.3);
+      }
+
+      .text-gold-gradient {
+        background: linear-gradient(
+          135deg,
+          hsl(43 80% 55%),
+          hsl(43 90% 70%),
+          hsl(43 80% 55%)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .bg-gold-gradient {
+        background: linear-gradient(
+          135deg,
+          hsl(43 80% 50%),
+          hsl(43 90% 60%),
+          hsl(43 80% 50%)
+        );
+      }
+
+      .bg-navy-gradient {
+        background: linear-gradient(
+          180deg,
+          hsl(220 25% 8%) 0%,
+          hsl(220 25% 12%) 100%
+        );
+      }
+
+      .shimmer {
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
+      @keyframes shimmer {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px hsla(43, 80%, 55%, 0.3);
+        }
+        50% {
+          box-shadow: 0 0 40px hsla(43, 80%, 55%, 0.6);
+        }
+      }
+
+      .animate-pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+
+      /* EFEITOS DE ENTRADA / SCROLL (simulando framer-motion) */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-24px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .reveal-right {
+        opacity: 0;
+        transform: translateX(24px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .reveal-zoom {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .reveal.in-view,
+      .reveal-left.in-view,
+      .reveal-right.in-view,
+      .reveal-zoom.in-view {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+      }
+
+      .delay-1 {
+        transition-delay: 0.1s;
+      }
+      .delay-2 {
+        transition-delay: 0.2s;
+      }
+      .delay-3 {
+        transition-delay: 0.3s;
+      }
+      .delay-4 {
+        transition-delay: 0.4s;
+      }
+      .delay-5 {
+        transition-delay: 0.5s;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <!-- HERO -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <img
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b0514dd785189288dd9db5/d33c054ba_generated_f213e597.png"
+          alt="Pessoa orando com luz divina"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-[rgba(9,11,16,0.8)] via-[rgba(9,11,16,0.7)] to-[rgba(9,11,16,1)]"
+        ></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-5 py-24 text-center reveal-zoom in-view">
+        <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-1.5 mb-8 reveal delay-1">
+          <div class="w-2 h-2 rounded-full bg-[hsl(43_80%_55%)] shimmer"></div>
+          <span class="text-[hsl(43_80%_55%)] text-sm font-medium"
+            >Oferta por tempo limitado</span
+          >
+        </div>
+
+        <h1
+          class="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 reveal delay-2"
+        >
+          Quando Tudo Parece Perdido,
+          <span class="text-gold-gradient">
+            Deus Ainda Pode Fazer um Milagre.
+          </span>
+        </h1>
+
+        <p
+          class="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed reveal delay-3"
+        >
+          Um propósito espiritual de 21 dias que pode ajudar você a renovar sua
+          fé, encontrar paz e fortalecer sua conexão com Deus.
+        </p>
+
+        <div class="mb-8 reveal delay-4">
+          <p
+            class="text-sm text-muted-foreground mb-3 uppercase tracking-wider"
+          >
+            Esta oferta expira em
+          </p>
+          <!-- Contador 1 -->
+          <div
+            id="countdown-hero"
+            class="flex items-center justify-center gap-3"
+          ></div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center reveal delay-5">
+          <button
+            onclick="scrollToOffer()"
+            class="bg-gold-gradient text-[hsl(220_25%_8%)] font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center"
+          >
+            Quero Começar Agora
+            <span class="ml-2">➜</span>
+          </button>
+
+          <a
+            href="https://wa.me/5521992320083?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20guia%2021%20Dias%20de%20Ora%C3%A7%C3%A3o%20para%20um%20Milagre%20Urgente."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border border-primary/40 text-foreground font-semibold text-lg px-8 py-4 rounded-full hover:bg-[hsla(43,80%,55%,0.1)] transition-all duration-300 flex items-center justify-center"
+          >
+            <span class="mr-2 text-green-400">💬</span>
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(220_25%_8%)] to-transparent"
+      ></div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section class="py-20 md:py-28 px-5">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <h2
+            class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+          >
+            Você está passando por algum
+            <span class="text-gold-gradient">desses momentos?</span>
+          </h2>
+        </div>
+
+        <div class="space-y-4 mb-10">
+          <div
+            class="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-all duration-300 reveal-left delay-1"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"
+            >
+              <span class="text-[hsl(43_80%_55%)]">!</span>
+            </div>
+            <p class="text-foreground text-base sm:text-lg">
+              Problemas financeiros que parecem não ter solução
+            </p>
+          </div>
+
+          <div
+            class="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-all duration-300 reveal-left delay-2"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"
+            >
+              <span class="text-[hsl(43_80%_55%)]">☾</span>
+            </div>
+            <p class="text-foreground text-base sm:text-lg">
+              Ansiedade ou noites sem dormir
+            </p>
+          </div>
+
+          <div
+            class="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-all duration-300 reveal-left delay-3"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"
+            >
+              <span class="text-[hsl(43_80%_55%)]">👨‍👩‍👧</span>
+            </div>
+            <p class="text-foreground text-base sm:text-lg">
+              Conflitos familiares
+            </p>
+          </div>
+
+          <div
+            class="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-all duration-300 reveal-left delay-4"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"
+            >
+              <span class="text-[hsl(43_80%_55%)]">?</span>
+            </div>
+            <p class="text-foreground text-base sm:text-lg">
+              Sentimento de estar perdido na vida
+            </p>
+          </div>
+
+          <div
+            class="flex items-center gap-4 bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-all duration-300 reveal-left delay-5"
+          >
+            <div
+              class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"
+            >
+              <span class="text-[hsl(43_80%_55%)]">☹</span>
+            </div>
+            <p class="text-foreground text-base sm:text-lg">
+              Falta de esperança
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center reveal delay-3">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <div class="h-px w-12 bg-primary/30"></div>
+            <span class="w-5 h-5 text-[hsl(43_80%_55%)]">❤</span>
+            <div class="h-px w-12 bg-primary/30"></div>
+          </div>
+          <p
+            class="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto leading-relaxed"
+          >
+            Muitas pessoas passam por momentos difíceis, mas a fé pode ser o
+            primeiro passo para reencontrar
+            <strong class="text-foreground">paz e direção</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT SECTION -->
+    <section class="py-20 md:py-28 px-5 bg-card">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="flex justify-center reveal-zoom">
+            <div class="relative">
+              <div
+                class="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl"
+              ></div>
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b0514dd785189288dd9db5/b057c0225_generated_43c641e3.png"
+                alt="Guia 21 Dias de Oração"
+                class="relative w-72 md:w-80 rounded-2xl shadow-2xl animate-float"
+              />
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <h2
+              class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight"
+            >
+              O que é o guia
+              <span class="text-gold-gradient">
+                "21 Dias de Oração para um Milagre Urgente"
+              </span>
+              ?
+            </h2>
+            <p
+              class="text-muted-foreground text-base sm:text-lg mb-8 leading-relaxed"
+            >
+              Este guia espiritual foi criado para ajudar você a se aproximar de
+              Deus durante 21 dias através de:
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-center gap-4 delay-1">
+                <div
+                  class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center"
+                >
+                  <span class="text-[hsl(43_80%_55%)]">📖</span>
+                </div>
+                <span
+                  class="text-foreground text-base sm:text-lg font-medium"
+                >
+                  Orações guiadas
+                </span>
+              </div>
+
+              <div class="flex items-center gap-4 delay-2">
+                <div
+                  class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center"
+                >
+                  <span class="text-[hsl(43_80%_55%)]">✨</span>
+                </div>
+                <span
+                  class="text-foreground text-base sm:text-lg font-medium"
+                >
+                  Versículos poderosos
+                </span>
+              </div>
+
+              <div class="flex items-center gap-4 delay-3">
+                <div
+                  class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center"
+                >
+                  <span class="text-[hsl(43_80%_55%)]">💡</span>
+                </div>
+                <span
+                  class="text-foreground text-base sm:text-lg font-medium"
+                >
+                  Reflexões espirituais
+                </span>
+              </div>
+
+              <div class="flex items-center gap-4 delay-4">
+                <div
+                  class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center"
+                >
+                  <span class="text-[hsl(43_80%_55%)]">❤</span>
+                </div>
+                <span
+                  class="text-foreground text-base sm:text-lg font-medium"
+                >
+                  Momentos de conexão com Deus
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="py-20 md:py-28 px-5">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <h2
+            class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+          >
+            O que você vai <span class="text-gold-gradient">receber</span>
+          </h2>
+        </div>
+
+        <div
+          class="bg-card border border-border rounded-2xl p-8 md:p-10 reveal-zoom"
+        >
+          <div class="space-y-5 mb-8">
+            <div class="flex items-start gap-4 delay-1">
+              <div
+                class="flex-shrink-0 w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center mt-0.5"
+              >
+                <span class="text-[hsl(43_80%_55%)]">✓</span>
+              </div>
+              <span class="text-foreground text-base sm:text-lg">
+                Devocional completo de 21 dias
+              </span>
+            </div>
+
+            <div class="flex items-start gap-4 delay-2">
+              <div
+                class="flex-shrink-0 w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center mt-0.5"
+              >
+                <span class="text-[hsl(43_80%_55%)]">✓</span>
+              </div>
+              <span class="text-foreground text-base sm:text-lg">
+                Orações guiadas para cada dia
+              </span>
+            </div>
+
+            <div class="flex items-start gap-4 delay-3">
+              <div
+                class="flex-shrink-0 w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center mt-0.5"
+              >
+                <span class="text-[hsl(43_80%_55%)]">✓</span>
+              </div>
+              <span class="text-foreground text-base sm:text-lg">
+                Versículos bíblicos poderosos
+              </span>
+            </div>
+
+            <div class="flex items-start gap-4 delay-4">
+              <div
+                class="flex-shrink-0 w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center mt-0.5"
+              >
+                <span class="text-[hsl(43_80%_55%)]">✓</span>
+              </div>
+              <span class="text-foreground text-base sm:text-lg">
+                Reflexões espirituais profundas
+              </span>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div
+                class="flex-shrink-0 w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center mt-0.5"
+              >
+                <span class="text-[hsl(43_80%_55%)]">✓</span>
+              </div>
+              <span class="text-foreground text-base sm:text-lg">
+                Exercícios simples de fé
+              </span>
+            </div>
+          </div>
+
+          <div class="border-t border-border pt-6">
+            <div
+              class="flex items-center gap-3 justify-center text-muted-foreground"
+            >
+              <span class="w-5 h-5 text-[hsl(43_80%_55%)]">📱</span>
+              <span class="text-sm sm:text-base">
+                <strong class="text-foreground">PDF digital</strong> — para
+                celular, tablet ou computador
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="py-20 md:py-28 px-5 bg-card">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <h2
+            class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+          >
+            O que pode acontecer quando você
+            <span class="text-gold-gradient">começa esse propósito?</span>
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="group bg-background border border-border rounded-2xl p-6 text-center hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-[hsla(43,80%,55%,0.05)] reveal delay-1"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors"
+            >
+              <span class="text-[hsl(43_80%_55%)] text-xl">❤</span>
+            </div>
+            <h3 class="text-foreground font-semibold text-lg">
+              Mais paz interior
+            </h3>
+          </div>
+
+          <div
+            class="group bg-background border border-border rounded-2xl p-6 text-center hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-[hsla(43,80%,55%,0.05)] reveal delay-2"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors"
+            >
+              <span class="text-[hsl(43_80%_55%)] text-xl">✨</span>
+            </div>
+            <h3 class="text-foreground font-semibold text-lg">
+              Mais fé e esperança
+            </h3>
+          </div>
+
+          <div
+            class="group bg-background border border-border rounded-2xl p-6 text-center hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-[hsla(43,80%,55%,0.05)] reveal delay-3"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors"
+            >
+              <span class="text-[hsl(43_80%_55%)] text-xl">👁</span>
+            </div>
+            <h3 class="text-foreground font-semibold text-lg">
+              Mais clareza espiritual
+            </h3>
+          </div>
+
+          <div
+            class="group bg-background border border-border rounded-2xl p-6 text-center hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-[hsla(43,80%,55%,0.05)] reveal delay-4"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors"
+            >
+              <span class="text-[hsl(43_80%_55%)] text-xl">🛡</span>
+            </div>
+            <h3 class="text-foreground font-semibold text-lg">
+              Força para enfrentar desafios
+            </h3>
+          </div>
+
+          <div
+            class="group bg-background border border-border rounded-2xl p-6 text-center hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-[hsla(43,80%,55%,0.05)] reveal delay-5"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors"
+            >
+              <span class="text-[hsl(43_80%_55%)] text-xl">⭐</span>
+            </div>
+            <h3 class="text-foreground font-semibold text-lg">
+              Uma conexão mais profunda com Deus
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 md:py-28 px-5">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <h2
+            class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+          >
+            Vidas que foram <span class="text-gold-gradient">transformadas</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-card border border-border rounded-2xl p-6 relative reveal delay-1"
+          >
+            <div class="flex gap-1 mb-4">
+              <span class="text-[hsl(43_80%_55%)]">★ ★ ★ ★ ★</span>
+            </div>
+            <p
+              class="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 italic"
+            >
+              "Eu estava vivendo um dos piores momentos da minha vida. Comecei o
+              propósito sem muita esperança, mas no sétimo dia senti uma paz
+              que não sentia há meses. Deus ouviu minhas orações."
+            </p>
+            <div class="border-t border-border pt-4">
+              <p class="font-semibold text-foreground">Maria S.</p>
+              <p class="text-xs text-muted-foreground">São Paulo, SP</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-card border border-border rounded-2xl p-6 relative reveal delay-2"
+          >
+            <div class="flex gap-1 mb-4">
+              <span class="text-[hsl(43_80%_55%)]">★ ★ ★ ★ ★</span>
+            </div>
+            <p
+              class="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 italic"
+            >
+              "Minha fé estava muito abalada. Esse guia me ajudou a retomar
+              minha conexão com Deus. Hoje me sinto fortalecido espiritualmente
+              para enfrentar qualquer desafio."
+            </p>
+            <div class="border-t border-border pt-4">
+              <p class="font-semibold text-foreground">João P.</p>
+              <p class="text-xs text-muted-foreground">Rio de Janeiro, RJ</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-card border border-border rounded-2xl p-6 relative reveal delay-3"
+          >
+            <div class="flex gap-1 mb-4">
+              <span class="text-[hsl(43_80%_55%)]">★ ★ ★ ★ ★</span>
+            </div>
+            <p
+              class="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 italic"
+            >
+              "Cada oração parecia escrita para mim. No final dos 21 dias,
+              percebi que algo tinha mudado dentro de mim — uma esperança
+              renovada que eu achava impossível sentir novamente."
+            </p>
+            <div class="border-t border-border pt-4">
+              <p class="font-semibold text-foreground">Ana C.</p>
+              <p class="text-xs text-muted-foreground">
+                Belo Horizonte, MG
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="py-20 md:py-28 px-5 bg-card">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center reveal">
+          <div
+            class="w-20 h-20 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center mx-auto mb-6"
+          >
+            <span class="text-[hsl(43_80%_55%)] text-3xl">✔</span>
+          </div>
+
+          <h2
+            class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-6"
+          >
+            Garantia incondicional de
+            <span class="text-gold-gradient">7 dias</span>
+          </h2>
+
+          <p
+            class="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-lg mx-auto"
+          >
+            Se você não sentir que este guia ajudou a fortalecer sua fé, basta
+            solicitar o reembolso dentro de 7 dias. Sem perguntas, sem
+            complicações.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER SECTION -->
+    <section id="oferta" class="py-20 md:py-28 px-5">
+      <div class="max-w-xl mx-auto">
+        <div class="text-center mb-10 reveal">
+          <h2
+            class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+          >
+            Comece hoje seu propósito de
+            <span class="text-gold-gradient">21 dias</span>
+          </h2>
+        </div>
+
+        <div
+          class="bg-card border-2 border-primary/30 rounded-3xl p-8 md:p-10 text-center relative overflow-hidden reveal-zoom"
+        >
+          <div
+            class="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"
+          ></div>
+          <div
+            class="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"
+          ></div>
+
+          <div class="relative">
+            <div class="mb-8">
+              <div
+                class="flex items-center justify-center gap-2 text-[hsl(43_80%_55%)] mb-3"
+              >
+                <span class="w-4 h-4">⏰</span>
+                <span
+                  class="text-sm font-semibold uppercase tracking-wider"
+                  >Oferta expira em</span
+                >
+              </div>
+              <!-- Contador 2 -->
+              <div
+                id="countdown-offer"
+                class="flex items-center justify-center gap-3"
+              ></div>
+            </div>
+
+            <div class="mb-8">
+              <p class="text-muted-foreground text-lg line-through mb-1">
+                De R$47
+              </p>
+              <div class="flex items-baseline justify-center gap-2">
+                <span class="text-muted-foreground text-lg">Por apenas</span>
+                <span
+                  class="text-5xl md:text-6xl font-bold text-gold-gradient font-playfair"
+                >
+                  R$17
+                </span>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              <button
+                onclick="openWhatsApp()"
+                class="w-full bg-gold-gradient text-[hsl(220_25%_8%)] font-bold text-lg px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center"
+              >
+                Quero Receber Meu Guia Agora
+                <span class="ml-2">➜</span>
+              </button>
+
+              <a
+                href="https://wa.me/5521992320083?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20guia%2021%20Dias%20de%20Ora%C3%A7%C3%A3o%20para%20um%20Milagre%20Urgente."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center border border-[rgba(34,197,94,0.4)] text-green-400 font-semibold text-base px-8 py-4 rounded-full hover:bg-[rgba(34,197,94,0.1)] transition-all duration-300"
+              >
+                <span class="mr-2">💬</span>
+                Falar com Suporte no WhatsApp
+              </a>
+            </div>
+
+            <div
+              class="flex flex-wrap justify-center gap-4 text-xs sm:text-sm text-muted-foreground"
+            >
+              <div class="flex items-center gap-1.5">
+                <span class="text-[hsl(43_80%_55%)]">✔</span>
+                <span>Garantia de 7 dias</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-[hsl(43_80%_55%)]">⚡</span>
+                <span>Acesso imediato</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 md:py-28 px-5 bg-card">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <h2
+            class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+          >
+            Perguntas <span class="text-gold-gradient">frequentes</span>
+          </h2>
+        </div>
+
+        <div class="space-y-3 reveal delay-2">
+          <details
+            class="bg-background border border-border rounded-xl px-6 py-4"
+          >
+            <summary class="cursor-pointer text-base sm:text-lg font-medium">
+              O guia é físico ou digital?
+            </summary>
+            <p class="mt-3 text-muted-foreground text-sm sm:text-base">
+              O guia é 100% digital, em formato PDF. Você pode acessar pelo
+              celular, tablet ou computador, a qualquer momento e em qualquer
+              lugar.
+            </p>
+          </details>
+
+          <details
+            class="bg-background border border-border rounded-xl px-6 py-4"
+          >
+            <summary class="cursor-pointer text-base sm:text-lg font-medium">
+              Como recebo o material?
+            </summary>
+            <p class="mt-3 text-muted-foreground text-sm sm:text-base">
+              Após a confirmação do pagamento, você receberá o acesso imediato
+              ao material por e-mail e também poderá acessar diretamente pelo
+              WhatsApp.
+            </p>
+          </details>
+
+          <details
+            class="bg-background border border-border rounded-xl px-6 py-4"
+          >
+            <summary class="cursor-pointer text-base sm:text-lg font-medium">
+              Posso começar qualquer dia?
+            </summary>
+            <p class="mt-3 text-muted-foreground text-sm sm:text-base">
+              Sim! Você pode iniciar o propósito de 21 dias a qualquer momento.
+              O importante é dar o primeiro passo.
+            </p>
+          </details>
+
+          <details
+            class="bg-background border border-border rounded-xl px-6 py-4"
+          >
+            <summary class="cursor-pointer text-base sm:text-lg font-medium">
+              Preciso seguir alguma religião específica?
+            </summary>
+            <p class="mt-3 text-muted-foreground text-sm sm:text-base">
+              O guia é baseado em princípios cristãos, mas qualquer pessoa que
+              busque fortalecer sua fé e conexão com Deus pode se beneficiar.
+            </p>
+          </details>
+
+          <details
+            class="bg-background border border-border rounded-xl px-6 py-4"
+          >
+            <summary class="cursor-pointer text-base sm:text-lg font-medium">
+              Quanto tempo leva cada oração?
+            </summary>
+            <p class="mt-3 text-muted-foreground text-sm sm:text-base">
+              Cada devocional diário leva aproximadamente 10 a 15 minutos. É um
+              momento de paz e reflexão que cabe na rotina de qualquer pessoa.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-20 md:py-28 px-5 relative overflow-hidden">
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+      ></div>
+
+      <div class="max-w-2xl mx-auto relative reveal">
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-3 mb-6">
+            <div class="h-px w-16 bg-primary/30"></div>
+            <span class="w-6 h-6 text-[hsl(43_80%_55%)]">❤</span>
+            <div class="h-px w-16 bg-primary/30"></div>
+          </div>
+
+          <h2
+            class="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight"
+          >
+            Deus já sabe o que você está passando.
+            <span class="text-gold-gradient">
+              Dê o primeiro passo de fé hoje.
+            </span>
+          </h2>
+
+          <p
+            class="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-lg mx-auto mb-10"
+          >
+            Você não precisa enfrentar tudo sozinho. Permita que 21 dias de
+            oração transformem sua perspectiva e renovem sua esperança.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onclick="scrollToOffer()"
+              class="bg-gold-gradient text-[hsl(220_25%_8%)] font-bold text-lg px-10 py-4 rounded-full hover:opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center"
+            >
+              Começar Meus 21 Dias de Oração
+              <span class="ml-2">➜</span>
+            </button>
+            <a
+              href="https://wa.me/5521992320083?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20guia%2021%20Dias%20de%20Ora%C3%A7%C3%A3o%20para%20um%20Milagre%20Urgente."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="border border-[rgba(34,197,94,0.4)] text-green-400 font-semibold text-base px-8 py-4 rounded-full hover:bg-[rgba(34,197,94,0.1)] transition-all duration-300 inline-flex items-center justify-center"
+            >
+              <span class="mr-2">💬</span>
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 text-center border-t border-border pt-8">
+        <p class="text-xs text-muted-foreground">
+          ©
+          <span id="current-year"></span>
+          — 21 Dias de Oração para um Milagre Urgente. Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </section>
+
+    <!-- WHATSAPP FLOAT -->
+    <a
+      href="https://wa.me/5521992320083?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20guia%2021%20Dias%20de%20Ora%C3%A7%C3%A3o%20para%20um%20Milagre%20Urgente."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 animate-pulse-glow"
+      style="box-shadow: 0 4px 30px rgba(37, 211, 102, 0.4)"
+    >
+      <span class="w-6 h-6">💬</span>
+      <span class="hidden sm:inline font-semibold text-sm">WhatsApp</span>
+    </a>
+
+    <script>
+      const WHATSAPP_URL =
+        "https://wa.me/5521992320083?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20guia%2021%20Dias%20de%20Ora%C3%A7%C3%A3o%20para%20um%20Milagre%20Urgente.";
+
+      function scrollToOffer() {
+        const el = document.getElementById("oferta");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }
+
+      function openWhatsApp() {
+        window.open(WHATSAPP_URL, "_blank");
+      }
+
+      function createCountdownElement(containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        let hours = 2;
+        let minutes = 47;
+        let seconds = 33;
+
+        function pad(n) {
+          return String(n).padStart(2, "0");
+        }
+
+        function render() {
+          container.innerHTML = "";
+          const parts = [
+            { value: pad(hours), label: "Horas" },
+            { value: pad(minutes), label: "Min" },
+            { value: pad(seconds), label: "Seg" },
+          ];
+
+          parts.forEach((item, i) => {
+            const wrapper = document.createElement("div");
+            wrapper.className = "flex items-center";
+
+            const block = document.createElement("div");
+            block.className =
+              "flex flex-col items-center";
+
+            const box = document.createElement("div");
+            box.className =
+              "bg-secondary border border-border rounded-lg px-4 py-2 min-w-[60px] text-center";
+
+            const val = document.createElement("span");
+            val.className =
+              "text-2xl md:text-3xl font-bold text-[hsl(43_80%_55%)] font-inter";
+            val.textContent = item.value;
+
+            box.appendChild(val);
+
+            const label = document.createElement("span");
+            label.className =
+              "text-xs text-muted-foreground mt-1 uppercase tracking-wider";
+            label.textContent = item.label;
+
+            block.appendChild(box);
+            block.appendChild(label);
+            wrapper.appendChild(block);
+
+            if (i < parts.length - 1) {
+              const sep = document.createElement("span");
+              sep.className =
+                "text-2xl font-bold text-[hsl(43_80%_55%)] mb-5 mx-2";
+              sep.textContent = ":";
+              wrapper.appendChild(sep);
+            }
+
+            container.appendChild(wrapper);
+          });
+        }
+
+        function tick() {
+          seconds--;
+          if (seconds < 0) {
+            seconds = 59;
+            minutes--;
+          }
+          if (minutes < 0) {
+            minutes = 59;
+            hours--;
+          }
+          if (hours < 0) {
+            hours = 23;
+            minutes = 59;
+            seconds = 59;
+          }
+          render();
+        }
+
+        render();
+        setInterval(tick, 1000);
+      }
+
+      function setupScrollAnimations() {
+        const options = {
+          threshold: 0.15,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              // não remove depois, assim como o framer-motion quando viewport.once = true
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+
+        document
+          .querySelectorAll(
+            ".reveal, .reveal-left, .reveal-right, .reveal-zoom"
+          )
+          .forEach((el) => {
+            // hero principal já começa visível (classe in-view já está lá)
+            if (!el.classList.contains("in-view")) {
+              observer.observe(el);
+            }
+          });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        createCountdownElement("countdown-hero");
+        createCountdownElement("countdown-offer");
+        setupScrollAnimations();
+
+        const yearEl = document.getElementById("current-year");
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+  </body>
+</html>
+
